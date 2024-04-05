@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agamemno Contingency - Legal Expertise</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Source Sans Pro', sans-serif; }
+  .banner {
+    background-image: url('Screenshot (20).png'); /* The relative path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .banner-content { background-color: rgba(255, 255, 255, 0.8); }
+  .icon { display: inline-block; padding: 0.5rem; background: #edf2f7; border-radius: 0.25rem; }
+
+  @media (max-width: 768px) {
+    .flex { flex-direction: column; }
+    .mt-8 { margin-top: 4rem; }
+    .px-4 { padding: 0 1rem; }
+    nav ul { padding: 0; }
+    nav ul li { margin-bottom: 1rem; }
+    .banner-content { padding: 10px; }
+  }
+</style>
+</head>
+<body class="bg-gray-100">
+
+<header class="bg-white shadow">
+  <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <h1 class="text-3xl font-bold leading-tight text-gray-900">
+      Agamemno Contingency
+    </h1>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="text-blue-600 hover:text-blue-800">Home</a></li>
+        <li><a href="about.html" class="text-gray-600 hover:text-gray-800">About</a></li>
+        <li><a href="practice_areas.html" class="text-gray-600 hover:text-gray-800">Practice Areas</a></li>
+        <li><a href="contact.html" class="text-white bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded">FREE CONSULTATION</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="banner-content max-w-4xl mx-auto py-24 px-6 text-center">
+    <h2 class="text-5xl font-bold leading-tight text-gray-900">Welcome to Agamemno Contingency</h2>
+    <p class="mt-4 text-gray-600">Welcome to the Agamemnon Contingency, where excellence in law is not just a pursuit, but a promise. At the core of our practice lies a profound dedication to supporting our clients through comprehensive legal services. Our expertise spans across critical areas including Legal Drafting, Tax Registration and Filing, Intellectual Property Rights, and General Legal Consultation.</p>
+    <div class="mt-8 flex justify-center">
+      <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 mr-4">FREE CONSULTATION</a>
+      <a href="#" class="bg-transparent border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white">PRACTICE AREAS</a>
+    </div>
+  </div>
+</div>
+
+<div class="py-12 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h3 class="text-3xl leading-9 font-extrabold text-gray-900">
+        Our Practice Areas
+      </h3>
+      <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-500">
+        Our team of seasoned attorneys and legal experts is committed to providing tailored solutions that address the unique challenges and objectives of each client. At Agamemnon Contingency, we believe in a collaborative approach, working closely with our clients to navigate the complexities of the legal landscape.
+      </p>
+    </div>
+    
+    <section id="practice-areas" class="py-12">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center">Our Practice Areas</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Intellectual Property -->
+          <div class="area-card bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-2xl font-bold mb-4">Intellectual Property</h3>
+            
+              <p> Protect your innovations and creative works with our comprehensive Intellectual Property services, ensuring your ideas stay uniquely yours in the competitive market.</p>
+          </div>
+          
+          <!-- Registration and Filing -->
+          <div class="area-card bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-2xl font-bold mb-4">Tax Registration and Filing</h3>
+            <p>Navigate the complexities of tax registration and filing with ease, as our experts provide tailored solutions to optimize your financial health and compliance.
+
+            </p>
+          </div>
+          
+          <!-- Tax Return Filing -->
+          <div class="area-card bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-2xl font-bold mb-4">Legal Drafting</h3>
+           <p>Experience precision in every clause with our Legal Drafting services, where meticulous attention to detail meets your bespoke legal needs.</p>
+          </div>
+          
+          <!-- Legal Drafting -->
+        
+        </div>
+      </div>
+    </section>
+    
+    
+<section class="my-8">
+    <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+        <div class="faq-item bg-white shadow-md rounded-lg p-6" id="faq1">
+            <h3 class="text-xl font-semibold mb-2 cursor-pointer">What types of cases does your firm handle?</h3>
+            <p class="hidden">We specialize in a variety of legal fields, including but not limited to corporate law, intellectual property, and employment law.</p>
+        </div>
+        <!-- Repeat for other FAQs -->
+    </div>
+</section>
+<section id="mission" class="bg-white shadow-md rounded-lg p-8 mb-6">
+    <a href="#mission" class="text-gray-600 hover:text-gray-800">Our Mission</a>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+        <script>
+            document.querySelectorAll('.faq-item h3').forEach(item => {
+                item.addEventListener('click', function() {
+                    this.nextElementSibling.classList.toggle('hidden');
+                });
+            });
+            </script>
+            
+<footer class="bg-gray-200">
+  <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+    <p class="mt-8 text-center text-gray-400 text-base">
+      &copy; 2024 Agamemnon Contingency. All rights reserved.
+    </p>
+  </div>
+</footer>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAMA4Jt0a2rnGGpdu_CaB3lYKkOk0avboA",
+    authDomain: "agamemno-contingency.firebaseapp.com",
+    projectId: "agamemno-contingency",
+    storageBucket: "agamemno-contingency.appspot.com",
+    messagingSenderId: "933857121810",
+    appId: "1:933857121810:web:7e820a59a212d169bfaacb"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+</body>
+</html>

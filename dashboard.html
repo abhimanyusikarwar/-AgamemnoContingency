@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Agamemno Contingency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <script>
+      // Your Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAMA4Jt0a2rnGGpdu_CaB3lYKkOk0avboA",
+  authDomain: "agamemno-contingency.firebaseapp.com",
+  projectId: "agamemno-contingency",
+  storageBucket: "agamemno-contingency.appspot.com",
+  messagingSenderId: "933857121810",
+  appId: "1:933857121810:web:7e820a59a212d169bfaacb"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <h1 class="text-3xl font-bold leading-tight text-gray-900">Agamemno Contingency</h1>
+            <nav>
+                <ul class="flex space-x-4" id="nav-items">
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">Home</a></li>
+                    <!-- Other links -->
+                    <li id="user-display-name">Login/Signup</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Your page content -->
+
+    <script>
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in, display their name
+          document.getElementById('user-display-name').textContent = user.displayName || user.email; // Fallback to email if displayName is not set
+        } else {
+          // No user is signed in, redirect to login page
+          window.location.href = 'login.html';
+        }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Agamemno Contingency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Source Sans Pro', sans-serif; }
+        .contact-section { padding: 40px; }
+        .form-control { margin-bottom: 20px; }
+        .form-control input, .form-control textarea, .form-control select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .contact-info { margin-top: 20px; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <h1 class="text-3xl font-bold leading-tight text-gray-900">Agamemno Contingency</h1>
+            <!-- Navigation Updated with Login/Signup -->
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-gray-600 hover:text-gray-800">Home</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-gray-800">About</a></li>
+                    <li><a href="practice_areas.html" class="text-gray-600 hover:text-gray-800">Practice Areas</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">Contact</a></li>
+                    <li><a href="login.html" class="text-gray-600 hover:text-gray-800">Login/Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="contact-section container mx-auto mt-12">
+        <h2 class="text-4xl font-bold text-center mb-8">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <form>
+                    <!-- Enhanced Contact Form -->
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="service-required">Service Required</label>
+                        <select id="service-required" name="service">
+                            <option>Legal Consultation</option>
+                            <option>Case Review</option>
+                            <!-- Additional Services -->
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="contact-method">Preferred Contact Method</label>
+                        <select id="contact-method" name="contact_method">
+                            <option>Email</option>
+                            <option>Phone Call</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <!-- Document Upload (Placeholder, requires backend) -->
+                    <div class="form-control">
+                        <label for="documents">Upload Documents</label>
+                        <input type="file" id="documents" name="documents" multiple>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p><strong>Office Location:</strong> 123 Justice Lane, Court City, Lawstate</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> contact@agamemnocontingency.com</p>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-200 py-6 mt-12">
+        <p class="text-center text-gray-600">&copy; 2024 Agamemno Contingency. All rights reserved.</p>
+    </footer>
+</body>
+</html>
